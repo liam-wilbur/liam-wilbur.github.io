@@ -1,0 +1,16 @@
+# This file ensures the projects folder is tracked by git
+# You can delete this file once you add your project images
+
+# Recommended image formats:
+# - .jpg or .jpeg for photographs
+# - .png for images with transparency
+# - .webp for modern browsers (smaller file sizes)
+
+# Recommended dimensions:
+# - 400x300 pixels (4:3 aspect ratio)
+# - Or 600x400 pixels for higher resolution displays
+
+# Example filenames:
+# - ecommerce-platform.jpg
+# - portfolio-website.png
+# - music-emporium.jpg
