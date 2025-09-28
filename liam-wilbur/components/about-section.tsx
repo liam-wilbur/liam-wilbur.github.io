@@ -91,7 +91,7 @@ export default function AboutSection() {
   }, [isVisible, isAnimating])
 
   return (
-    <section id="about-section" className="min-h-screen py-20 section-paper relative" style={{ zIndex: -9999 }}>
+    <section id="about-section" className="py-20 section-paper relative" style={{ zIndex: -9999 }}>
       <div className="section-content">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">

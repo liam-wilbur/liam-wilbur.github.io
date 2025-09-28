@@ -44,7 +44,7 @@ export default function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<(typeof projects)[0] | null>(null)
 
   return (
-    <section id="projects-section" className="min-h-screen section-paper pt-20">
+    <section id="projects-section" className="section-paper pt-20 pb-20">
       <div className="section-content">
         <div className="container mx-auto px-4">
           <h2

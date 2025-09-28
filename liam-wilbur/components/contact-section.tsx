@@ -5,7 +5,7 @@ import { Mail, Github, Linkedin, Instagram } from "lucide-react"
 
 export default function ContactSection() {
   return (
-    <section id="contact-section" className="pb-20 section-paper" style={{ zIndex: -20 }}>
+    <section id="contact-section" className="pb-20 pt-20 section-paper" style={{ zIndex: -20 }}>
       <div className="section-content">
         <div className="container mx-auto px-4">
           {/* Simple Social Section */}

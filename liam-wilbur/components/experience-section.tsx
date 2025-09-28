@@ -7,11 +7,11 @@ import { Badge } from "@/components/ui/badge"
 const experiences = [
   {
     year: "Summer 2025",
-    company: "InstaLILY",
+    company: "InstaLILY AI",
     role: "Software Engineer Intern",
     description:
       "Developed production ML models and monitoring infrastructure for a $2B ARR parts distribution platform, fine-tuning search algorithms and building real-time analytics systems serving clients.",
-    achievements: ["Deployed fine-tuned transformer based architecture into production for search platform of 2 billion ARR company.", "Architected end-to-end logging pipeline from Google Cloud to Elasticsearch, implementing real-time monitoring dashboards, automated alerting system and visualization tools tracking latency, API performance, and error rates.", "Integrated OpenAI Whisper STT/TTS APIs into Parts Information Database chatbot, implementing auto-correction using vector embeddings and reducing latency through chunking strategies."],
+    achievements: ["Fine-tuned sentence transformer pipeline with contrastive loss and multi-phase training, improving performance on product surfacing tasks by 6% while maintaining semantic accuracy.", "Designed scalable evaluation framework across 4 custom datasets (semantic benchmarks, synonym/antonym pairs, query relevance) to enable reliable tracking of model quality and reduce evaluation time by 50%.", "Deployed fine-tuned transformer into production search for a $2B ARR manufacturing platform, enabling millions of monthly queries with improved semantic search retrieval.", "Architected an end-to-end logging pipeline (Google Cloud → Elasticsearch) with dashboards and automated alerts, introducing real-time monitoring and providing visibility into latency, API performance, and error rates."],
     technologies: ["Python", "GCP", "Elasticsearch", "PyTorch", "Kibana",],
   },
   {
@@ -20,7 +20,7 @@ const experiences = [
     role: "Full-Stack Developer",
     description:
       "Led development of supplementary tools for counselors in Durham County Public School System, aimed at bridging financial aid and college prep knowledge gaps for students in low-income communities",
-    achievements: ["Created Financial Aid Comparison Tool, AI Essay Reviewer, and Resume Reviewer", "End-to-end development of a usable and effective product that will change student lives", "Full-stack application to be deployed for use across the Durham County Public School System in 2026"],
+    achievements: ["Led development of web-based counseling tools for Durham County Public Schools, helping bridge financial aid and college prep gaps for students in low-income communities.", "Developed Financial Aid Comparison, AI Essay Reviewer, and Resume Reviewer tools end-to-end.", "Full-stack application to be deployed for use across the Durham County Public School System in 2026"],
     technologies: ["React", "Javascript", "TypeScript", "CSS", "Next.js"],
   },
   {
@@ -28,7 +28,7 @@ const experiences = [
     company: "DataAnnotation",
     role: "AI Data Analyst",
     description: "Performed comprehensive quality assurance on AI model outputs to enhance functionality and optimize performance across diverse applications",
-    achievements: ["Evaluated AI-generated code in multiple programming languages, ensuring correctness, clarity, and alignment with best practices", "Wrote in-depth test cases to validate accuracy and performance of code"],
+    achievements: ["Conducted quality assurance on thousands of AI model outputs, including code across 5+ programming languages (Python, Java, C++, etc.), ensuring correctness, clarity, and reliability for downstream training and evaluation.", "Wrote in-depth test cases to validate accuracy and performance of code"],
     technologies: ["Python", "Javascript", "C++", "SQL"],
   },
 ]
@@ -86,7 +86,7 @@ export default function ExperienceSection() {
                         <h5 className="text-black font-semibold mb-2">Key Achievements:</h5>
                         <ul className="text-gray-700 text-sm space-y-1">
                           {exp.achievements.map((achievement, i) => (
-                            <li key={i} className="flex items-center">
+                            <li key={i} className="flex items-top">
                               <span className="text-green-400 mr-2">▶</span>
                               {achievement}
                             </li>

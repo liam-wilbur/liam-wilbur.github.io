@@ -9,8 +9,22 @@ const config = {
     "./src/**/*.{ts,tsx}",
     "*.{js,ts,jsx,tsx,mdx}",
   ],
+  // safelist: [
+  //   { pattern: /^text-(xs|sm|base|lg|xl|[2-7]xl)$/ },
+  //   { pattern: /^sm:text-(xs|sm|base|lg|xl|[2-7]xl)$/ },
+  //   { pattern: /^md:text-(xs|sm|base|lg|xl|[2-7]xl)$/ },
+  //   { pattern: /^lg:text-(xs|sm|base|lg|xl|[2-7]xl)$/ },
+  //   { pattern: /^xl:text-(xs|sm|base|lg|xl|[2-7]xl)$/ },
+  // ],
   prefix: "",
   theme: {
+    // screens: {
+    //   sm: "640px",
+    //   md: "768px",
+    //   lg: "1024px",
+    //   xl: "1280px",
+    //   "2xl": "1536px",
+    // },
     container: {
       center: true,
       padding: "2rem",
