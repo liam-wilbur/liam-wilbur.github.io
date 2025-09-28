@@ -4,40 +4,41 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 
 export default function BlogSection() {
-  const [isWide, setIsWide] = useState(false)
+  const [showSection, setShowSection] = useState(false)
 
   useEffect(() => {
-    const update = () => setIsWide(window.innerWidth >= 700)
-    update()
-    window.addEventListener("resize", update)
-    return () => window.removeEventListener("resize", update)
+    const updateVisibility = () => {
+      if (typeof window !== "undefined") {
+        setShowSection(window.innerWidth > 700)
+      }
+    }
+    updateVisibility()
+    window.addEventListener("resize", updateVisibility)
+    return () => window.removeEventListener("resize", updateVisibility)
   }, [])
 
-  if (!isWide) return null
+  if (!showSection) return null
 
   return (
-    <section id="blog-section" className="section-paper py-20">
+    <section id="blog-section" className="section-paper py-16">
       <div className="section-content">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-2">
 
-          <div className="max-w-4xl mx-auto border-2 border-dashed border-gray-400 dark:border-gray-600 rounded-2xl bg-white/40 dark:bg-gray-900/40 backdrop-blur-lg transition-transform duration-300 hover:scale-105 origin-center">
-            <div className="p-6 md:p-10">
-              <div className="mb-5 flex items-center justify-between">
-                <span className="px-4 py-1.8 rounded-full bg-blue-500/90 text-black font-bold text-base backdrop-blur-sm border border-blue-400">
-                  Blog
-                </span>
-                <span className="font-mono text-xs text-gray-600 dark:text-gray-400">September 2025</span>
-              </div>
-            
-              <div className="mt-4 flex items-center gap-3">
-              </div>
+          <div className="max-w-4xl mx-auto rounded-2xl ">
+            <div className="p-6 md:p-10 hover:scale-[1.02]">
               <a
                 href="https://liam-wilbur.github.io/blog/fine-tuning-sentence-transformer"
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label="Read: Lessons from Fine-Tuning a Sentence Transformer for Domain Adaptation"
-                className="group block rounded-xl p-5 md:p-6 transition-colors hover:bg-gray-900/5 dark:hover:bg-white/5"
+                className="group block border-2 border-dashed border-gray-400 dark:border-gray-600 rounded-2xl p-5 md:p-6 transform transition-transform duration-300 ease-out hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-900 dark:focus-visible:ring-white"
               >
+                <div className="mb-2 flex items-center justify-between">
+                  <span className="px-4 py-1.5 rounded-full bg-black text-black dark:bg-white dark:text-black border border-gray-400 dark:border-gray-500 font-bold text-base shadow-sm ring-1 ring-black/10 dark:ring-white/20">
+                    Blog
+                  </span>
+                  <span className="font-mono text-xs text-gray-600 dark:text-gray-400">September 2025</span>
+                </div>
                 <div className="flex items-start justify-between gap-6">
                   <div className="min-w-0">
                     <h3 className="text-2xl md:text-2xl font-semibold text-gray-900 dark:text-gray-100">

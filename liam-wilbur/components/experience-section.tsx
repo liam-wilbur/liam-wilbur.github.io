@@ -37,7 +37,7 @@ export default function ExperienceSection() {
   const [selectedIndex, setSelectedIndex] = useState(0)
 
   return (
-    <section className="min-h-screen section-paper py-20">
+    <section className="min-h-screen section-paper py-20 mt-40 mb-40">
       <div className="section-content">
         <div className="container mx-auto px-4">
           <h2
